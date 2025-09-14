@@ -7,6 +7,7 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.cron.CronUtil;
 import cn.hutool.setting.Setting;
 import lombok.extern.slf4j.Slf4j;
+import top.misec.applemonitor.config.AliveAlterConfig;
 import top.misec.applemonitor.config.AppCfg;
 import top.misec.applemonitor.config.CfgSingleton;
 
@@ -35,10 +36,18 @@ public class AppleMonitorMain {
             Setting setting = new Setting();
             setting.set("top.misec.applemonitor.job.AppleMonitor.monitor", appCfg.getAppleTaskConfig().cronExpressions);
 
+            if (appCfg.getAppleTaskConfig().isAliveAlterSet()){
+                AliveAlterConfig aliveAlterConfig = appCfg.getAppleTaskConfig().getAliveAlterConfig();
+                log.info("App存活监控已启动，推送表达式 ：" + aliveAlterConfig.getCronExpressions());
+                setting.set("top.misec.applemonitor.job.AppAliveAlterMonitor.alter", appCfg.getAppleTaskConfig().cronExpressions);
+            }
+
 
             CronUtil.setCronSetting(setting);
             CronUtil.setMatchSecond(true);
             CronUtil.start(true);
+
+
         }
 
         LOCK.lock();

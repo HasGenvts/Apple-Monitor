@@ -1,0 +1,98 @@
+{
+  "appleTaskConfig": {
+    "cronExpressions": "*/12 * * * * ?",
+    "country": "CN",
+    "location": "福建 福州 鼓楼区",
+    "aliveAlterConfig":{
+      "cronExpressions":"*/5 * * * * ?",
+      "pushConfig":
+      {
+        "barkPushUrl": "https://api.day.app/push",
+        "barkPushToken": "x9i3vSKWH5H2QffB8JqxXn",
+        "barkPushSound": "multiwayinvitation.caf",
+        "feishuBotWebhooks": "",
+        "feishuBotSecret": ""
+      }
+    },
+    "deviceCodeList": [
+      {
+        "deviceCode": "MG8T4CH/A",
+        "storeWhiteList": ["泰禾广场"],
+        "pushConfigs": [
+          {
+            "barkPushUrl": "https://api.day.app/push",
+            "barkPushToken": "x9i3vSKWH5H2QffB8JqxXn",
+            "barkPushSound": "multiwayinvitation.caf",
+            "feishuBotWebhooks": "",
+            "feishuBotSecret": ""
+          }
+        ]
+      },
+      {
+        "deviceCode": "MG8U4CH/A",
+        "storeWhiteList": ["泰禾广场"],
+        "pushConfigs": [
+          {
+            "barkPushUrl": "https://api.day.app/push",
+            "barkPushToken": "x9i3vSKWH5H2QffB8JqxXn",
+            "barkPushSound": "multiwayinvitation.caf",
+            "feishuBotWebhooks": "",
+            "feishuBotSecret": ""
+          }
+        ]
+      },
+      {
+        "deviceCode": "MG8V4CH/A",
+        "storeWhiteList": ["泰禾广场"],
+        "pushConfigs": [
+          {
+            "barkPushUrl": "https://api.day.app/push",
+            "barkPushToken": "x9i3vSKWH5H2QffB8JqxXn",
+            "barkPushSound": "multiwayinvitation.caf",
+            "feishuBotWebhooks": "",
+            "feishuBotSecret": ""
+          }
+        ]
+      },
+      {
+        "deviceCode": "MG034CH/A",
+        "storeWhiteList": ["泰禾广场"],
+        "pushConfigs": [
+          {
+            "barkPushUrl": "https://api.day.app/push",
+            "barkPushToken": "x9i3vSKWH5H2QffB8JqxXn",
+            "barkPushSound": "multiwayinvitation.caf",
+            "feishuBotWebhooks": "",
+            "feishuBotSecret": ""
+          }
+        ]
+      },
+      {
+        "deviceCode": "MG044CH/A",
+        "storeWhiteList": ["泰禾广场"],
+        "pushConfigs": [
+          {
+            "barkPushUrl": "https://api.day.app/push",
+            "barkPushToken": "x9i3vSKWH5H2QffB8JqxXn",
+            "barkPushSound": "multiwayinvitation.caf",
+            "feishuBotWebhooks": "",
+            "feishuBotSecret": ""
+          }
+        ]
+      },
+      {
+        "deviceCode": "MG054CH/A",
+        "storeWhiteList": ["泰禾广场"],
+        "pushConfigs": [
+          {
+            "barkPushUrl": "https://api.day.app/push",
+            "barkPushToken": "x9i3vSKWH5H2QffB8JqxXn",
+            "barkPushSound": "multiwayinvitation.caf",
+            "feishuBotWebhooks": "",
+            "feishuBotSecret": ""
+          }
+        ]
+      }
+    ]
+  }
+}

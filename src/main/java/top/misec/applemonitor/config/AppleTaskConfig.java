@@ -10,6 +10,7 @@ import top.misec.bark.BarkPush;
 import top.misec.bark.enums.SoundEnum;
 
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,6 +23,7 @@ public class AppleTaskConfig {
     public String location;
     public String cronExpressions;
     public String country;
+    public AliveAlterConfig aliveAlterConfig;
 
     public boolean valid() {
         if (CollectionUtil.isEmpty(deviceCodeList)) {
@@ -76,5 +78,15 @@ public class AppleTaskConfig {
 
         return true;
 
+    }
+
+    public boolean isAliveAlterSet(){
+        if (aliveAlterConfig == null){
+            return false;
+        }
+        if (StrUtil.isEmpty(aliveAlterConfig.getCronExpressions())) {
+            return false;
+        }
+        return true;
     }
 }

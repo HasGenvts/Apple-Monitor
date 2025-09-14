@@ -172,9 +172,9 @@ public class AppleMonitor {
      * @return pickup message
      */
     private String buildPickupInformation(JSONObject retailStore) {
-        String distanceWithUnit = retailStore.getString("distanceWithUnit");
-        String twoLineAddress = retailStore.getJSONObject("address").getString("twoLineAddress");
-        String daytimePhone = retailStore.getJSONObject("address").getString("daytimePhone");
+        String distanceWithUnit = StrUtil.emptyToDefault(retailStore.getString("distanceWithUnit"),"");
+        String twoLineAddress = StrUtil.emptyToDefault(retailStore.getJSONObject("address").getString("twoLineAddress"),"");
+        String daytimePhone = StrUtil.emptyToDefault(retailStore.getJSONObject("address").getString("daytimePhone"),"");
         String lo = CONFIG.getAppleTaskConfig().getLocation();
         String messageTemplate = "\n取货地址:{},电话:{},距离{}:{}";
         return StrUtil.format(messageTemplate, twoLineAddress.replace("\n", " "), daytimePhone, lo, distanceWithUnit);
@@ -195,7 +195,7 @@ public class AppleMonitor {
     private Map<String, List<String>> buildHeaders(String baseCountryUrl, String productCode) {
 
         ArrayList<String> referer = new ArrayList<>();
-        referer.add(baseCountryUrl + "/shop/buy-iphone/iphone-14-pro/" + productCode);
+        referer.add(baseCountryUrl + "/shop/buy-iphone/iphone-17-pro/" + productCode);
 
         Map<String, List<String>> headers = new HashMap<>(10);
         headers.put(Header.REFERER.getValue(), referer);
