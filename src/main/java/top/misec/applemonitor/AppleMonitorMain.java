@@ -39,7 +39,7 @@ public class AppleMonitorMain {
             if (appCfg.getAppleTaskConfig().isAliveAlterSet()){
                 AliveAlterConfig aliveAlterConfig = appCfg.getAppleTaskConfig().getAliveAlterConfig();
                 log.info("App存活监控已启动，推送表达式 ：" + aliveAlterConfig.getCronExpressions());
-                setting.set("top.misec.applemonitor.job.AppAliveAlterMonitor.alter", appCfg.getAppleTaskConfig().cronExpressions);
+                setting.set("top.misec.applemonitor.job.AppAliveAlterMonitor.alter", appCfg.getAppleTaskConfig().getAliveAlterConfig().getCronExpressions());
             }
 
 
