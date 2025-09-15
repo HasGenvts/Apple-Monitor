@@ -173,7 +173,7 @@ public class AppleMonitor {
      */
     private String buildPickupInformation(JSONObject retailStore) {
         String distanceWithUnit = StrUtil.emptyToDefault(retailStore.getString("distanceWithUnit"),"");
-        String twoLineAddress = StrUtil.emptyToDefault(retailStore.getJSONObject("address").getString("twoLineAddress"),"");
+        String twoLineAddress = StrUtil.emptyToDefault(retailStore.getJSONObject("address").getString("street"),"");
         String daytimePhone = StrUtil.emptyToDefault(retailStore.getJSONObject("address").getString("daytimePhone"),"");
         String lo = CONFIG.getAppleTaskConfig().getLocation();
         String messageTemplate = "\n取货地址:{},电话:{},距离{}:{}";

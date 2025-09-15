@@ -35,7 +35,7 @@ public class CfgSingleton {
 
     public static CfgSingleton getInstance() {
 
-        if (uniqueInstance == null) {
+        if (uniqueInstance == null || uniqueInstance.config == null) {
             synchronized (CfgSingleton.class) {
                 if (uniqueInstance == null) {
                     uniqueInstance = new CfgSingleton();

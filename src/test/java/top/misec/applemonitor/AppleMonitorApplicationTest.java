@@ -79,6 +79,14 @@ class AppleMonitorApplicationTest {
         new AppleMonitor().monitor();
     }
 
+    @Test
+    void monitorTestCNNEW() {
+        String cnCfg = "config-new.json";
+        AppCfg config = getAppCfg(cnCfg);
+        log.info("config: {}", config);
+        new AppleMonitor().monitor();
+    }
+
 
     private AppCfg getAppCfg(String fileName) {
         return CfgSingleton.getTestInstance(fileName).config;
